@@ -1,0 +1,25 @@
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+</head>
+<body>
+{#Crear Municipio#}
+{#<br>#}
+{#{{ municipio | crispy }}#}
+{#<br>#}
+{#Crear Region#}
+{#<br>#}
+{#{{ region | crispy }}#}
+
+
+<form method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Update">
+</form>
+
+
+</body>
+</html>
